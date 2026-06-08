@@ -17,15 +17,20 @@ Biner `tenun` ada di `PATH` (untuk formatter). Cek: `tenun version`.
 
 ## Pasang
 
-**lazy.nvim**
+**lazy.nvim** — taruh di `~/.config/nvim/lua/plugins/tenun.lua`:
 
 ```lua
-{
+return {
   "TenunLang/tenun-nvim",
-  ft = "tenun",
-  opts = {},          -- panggil require("tenun").setup(opts)
+  ft = "tenun",        -- muat saat buka berkas .tenun
+  opts = {             -- diteruskan ke require("tenun").setup(opts)
+    bin = "tenun",            -- path biner tenun (default: cari di PATH)
+    format_on_save = false,   -- true = rapikan otomatis saat simpan
+  },
 }
 ```
+
+`opts = {}` cukup untuk default. Restart Neovim lalu cek `:Lazy`.
 
 **packer.nvim**
 
