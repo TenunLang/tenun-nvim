@@ -44,6 +44,29 @@ use({ "TenunLang/tenun-nvim", config = function() require("tenun").setup() end }
 Plug 'TenunLang/tenun-nvim'
 ```
 
+**Tanpa plugin manager (git clone via CLI)** — Neovim native package, clone ke `pack/*/start/`:
+
+Linux / macOS:
+
+```bash
+git clone https://github.com/TenunLang/tenun-nvim \
+  ~/.local/share/nvim/site/pack/tenun/start/tenun-nvim
+```
+
+Windows (cmd):
+
+```bat
+git clone https://github.com/TenunLang/tenun-nvim "%LOCALAPPDATA%\nvim-data\site\pack\tenun\start\tenun-nvim"
+```
+
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/TenunLang/tenun-nvim "$env:LOCALAPPDATA\nvim-data\site\pack\tenun\start\tenun-nvim"
+```
+
+Update: `git -C <path-di-atas> pull`. Hapus: hapus folder itu.
+
 Highlighting + deteksi filetype jalan tanpa `setup()`. `setup()` hanya perlu untuk opsi (mis. format-saat-simpan).
 
 ## Pakai
